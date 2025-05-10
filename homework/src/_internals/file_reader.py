@@ -1,7 +1,7 @@
 import os
 
 
-class FileReader:
+class filereader:
 
     def __init__(self, input_folder):
         self.input_folder = input_folder

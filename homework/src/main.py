@@ -112,3 +112,49 @@ modelo_b = crear_regresion_linea(Positive=False)
 #         'positive': True,
 
 # }
+
+def crear_mlpc(hidden_layer_sizes, learning_rate=0.1):
+        return {
+        'model_type': "mlpc_classifier",
+        'pesos': None,
+        'hidden_layer_sizes': hidden_layer_sizes,
+        'learning_rate': learning_rate,
+    }
+
+modelo_c = crear_mlpc(hidden_layer_sizes=(10, ))
+# {        'model_type': "mlpc_classifier",
+#         'pesos': None,
+#         'hidden_layer_sizes': (10.1),
+#         'learning_rate': 0.1,
+
+# }
+
+modelo_d = crear_mlpc(hidden_layer_sizes=(20, ))
+# {        'model_type': "mlpc_classifier",
+#         'pesos': None,
+#         'hidden_layer_sizes': (10.1),
+#         'learning_rate': 0.1,
+
+# }
+
+def train_regresion_lineal(params, x, y):
+    #computa
+    return {
+        'model_type': "linear_regression",
+        'coefs': los valores calculados,
+        'intercept': valor optimo calculado,
+        'positive': positive,
+    }
+
+modelo_a = train_regresion_lineal(modelo_a, x , y)
+modelo_b = train_regresion_lineal(modelo_b, x, y)
+
+modelo_c = train_mlpc(modelo_c. x, y)
+
+def predict_regresion_lineal(paramx, x)
+    #calcula
+    return y_pred
+
+def predict_mlpc(params, x):
+    #calcula
+    return y_pred
