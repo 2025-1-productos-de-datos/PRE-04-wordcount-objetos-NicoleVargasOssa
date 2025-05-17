@@ -1,10 +1,7 @@
 import os
 
 
-class filereader:
-
-    def __init__(self, input_folder):
-        self.input_folder = input_folder
+class ReadAllLinesMixin:
 
     def read_all_lines(self):
         """Read all lines from all files in the input folder."""
@@ -14,4 +11,5 @@ class filereader:
             file_path = os.path.join(self.input_folder, filename)
             with open(file_path, "r", encoding="utf-8") as f:
                 lines.extend(f.readlines())
-        return lines
+
+        self.lines = lines
